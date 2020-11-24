@@ -1,7 +1,8 @@
 <template>
     <button
-        type="submit"
-        class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none"
+        :disabled="disabled"
+        class="transition w-full font-medium tracking-widest text-white uppercase focus:outline-none hover:shadow-none"
+        :class="{'shadow-lg bg-black hover:bg-gray-900': !disabled, 'bg-gray-300 cursor-default': disabled}"
     >
         <slot />
     </button>
@@ -9,6 +10,12 @@
 
 <script>
     export default {
-        name: "Button"
+        name: 'VButton',
+        props: {
+            disabled: {
+                type: Boolean,
+                default: false,
+            }
+        },
     }
 </script>
