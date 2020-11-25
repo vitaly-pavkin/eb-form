@@ -22825,7 +22825,7 @@ var render = function() {
                                   _c("v-input", {
                                     attrs: {
                                       id: "phone",
-                                      placeholder: "Номер телефона"
+                                      placeholder: "+7 (123) 456 78 90"
                                     },
                                     model: {
                                       value: _vm.form.phone,

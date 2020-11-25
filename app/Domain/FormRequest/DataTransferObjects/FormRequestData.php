@@ -2,6 +2,7 @@
 
 namespace Domain\FormRequest\DataTransferObjects;
 
+use Propaganistas\LaravelPhone\PhoneNumber;
 use Spatie\DataTransferObject\DataTransferObject;
 
 /**
@@ -16,9 +17,9 @@ class FormRequestData extends DataTransferObject
     public string $name;
 
     /**
-     * @var string
+     * @var \Propaganistas\LaravelPhone\PhoneNumber
      */
-    public string $phone;
+    public PhoneNumber $phone;
 
     /**
      * @var string

@@ -24,7 +24,7 @@
                         >Номер телефона
                     </label>
                     <validation-provider vid="phone" v-slot="{ errors }">
-                        <v-input v-model="form.phone" id="phone" placeholder="Номер телефона"></v-input>
+                        <v-input v-model="form.phone" id="phone" placeholder="+7 (123) 456 78 90"></v-input>
                         <small class="text-red-900">{{ errors[0] }}</small>
                     </validation-provider>
                 </div>

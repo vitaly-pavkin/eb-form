@@ -19,7 +19,7 @@ class FormRequestRequest extends FormRequest
     {
         return [
             'name' => 'required|string',
-            'phone' => 'required|string',
+            'phone' => 'required|phone:RU',
             'message' => 'required|string',
         ];
     }
