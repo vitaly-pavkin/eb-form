@@ -17,9 +17,12 @@ class FormRequestServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        // Replace \Infrastructure\FormRequest\Eloquent\FormRequestRepository
+        // with \Infrastructure\FormRequest\Storage\FormRequestRepository
+        // to use the storage repository
         $this->app->bind(
             \Domain\FormRequest\Repositories\FormRequestRepository::class,
-            \Infrastructure\FormRequest\Eloquent\FormRequestRepository::class,
+            \Infrastructure\FormRequest\Eloquent\FormRequestRepository::class
         );
     }
 
